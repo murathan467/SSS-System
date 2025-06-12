@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Üniversite SSS Kayıt</title>
+    <link rel="stylesheet" href="register.css" />
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>Üniversite SSS Sistemi</h1>
+    </header>
+
+    <div class="register-container">
+        <form id="registerForm">
+            <h2>Kayıt Ol</h2>
+            <div class="form-group">
+                <label for="name">Ad Soyad</label>
+                <input type="text" id="name" required />
+            </div>
+            <div class="form-group">
+                <label for="email">E-posta</label>
+                <input type="email" id="email" required />
+            </div>
+            <div class="form-group">
+                <label for="password">Parola</label>
+                <input type="password" id="password" required />
+            </div>
+            <div class="form-group">
+                <label for="userType">Kullanıcı Türü</label>
+                <select id="userType" required>
+                    <option value="student">Öğrenci</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Kayıt Ol</button>
+        </form>
+
+        <div class="extra-links">
+            <button onclick="location.href='../login/login.html'" class="btn secondary-btn">Zaten Hesabım Var</button>
+        </div>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="register.js"></script>
+</body>
+</html>

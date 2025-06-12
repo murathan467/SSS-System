@@ -1,0 +1,102 @@
+/* Genel sıfırlama */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header kısmı */
+.main-header {
+    background: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 4px solid #2c3e50;
+}
+
+/* Giriş kutusu (merkezlenmiş) */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto; /* sayfa ortasında yukarıdan ve yataydan ortalanır */
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+}
+
+/* Form başlığı */
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Form elemanları */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Giriş butonu */
+.btn {
+    width: 100%;
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background: #219a52;
+}
+
+/* Bildirim kutusu */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #27ae60;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+}
+.extra-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.secondary-btn {
+    background: #007cba;
+}
+
+.secondary-btn:hover {
+    background: #007cba;
+}
+

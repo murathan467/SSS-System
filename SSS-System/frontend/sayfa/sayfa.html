@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSS Sistemi - Frontend</title>
+    <link rel="stylesheet" href="sayfa.css">
+<body>
+    <header>
+        <h1>🎓 SSS Sistemi</h1>
+        <p>Sıkça Sorulan Sorular</p>
+        <nav class="nav">
+            <button onclick="showPage('home')" class="active">Ana Sayfa</button>
+            <button onclick="showPage('faq')">SSS</button>
+            <button onclick="showPage('ask')">Soru Sor</button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Ana Sayfa -->
+        <div id="home" class="page active">
+            <h2>Hoş Geldiniz!</h2>
+            <p>Bu sistemde sıkça sorulan soruları bulabilir, yeni sorular sorabilirsiniz.</p>
+            <br>
+            <h3>Neler Yapabilirsiniz?</h3>
+            <ul>
+                <li>📚 Mevcut soruları arayabilirsiniz</li>
+                <li>❓ Yeni soru sorabilirsiniz</li>
+                <li>🔍 Kategorilere göre filtreleme yapabilirsiniz</li>
+                <li>👤 Hesap oluşturup giriş yapabilirsiniz</li>
+            </ul>
+        </div>
+
+        <!-- SSS Sayfası -->
+        <div id="faq" class="page">
+            <h2>Sıkça Sorulan Sorular</h2>
+            
+            <!-- Arama -->
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Soruları ara..." onkeyup="searchFAQ()">
+                <button class="btn" onclick="searchFAQ()">Ara</button>
+            </div>
+
+            <!-- Kategori Filtreleri -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterFAQ('all')">Tümü</button>
+                <button class="filter-btn" onclick="filterFAQ('academic')">Akademik</button>
+                <button class="filter-btn" onclick="filterFAQ('registration')">Kayıt</button>
+                <button class="filter-btn" onclick="filterFAQ('campus')">Kampüs</button>
+                <button class="filter-btn" onclick="filterFAQ('other')">Diğer</button>
+            </div>
+
+            <!-- SSS Listesi -->
+            <div id="faqList">
+                <!-- Sorular buraya gelecek -->
+            </div>
+        </div>
+
+        <!-- Soru Detay Sayfası -->
+        <div id="question-detail" class="page">
+            <button class="btn" onclick="showPage('faq')">← Geri Dön</button>
+            <div id="questionContent">
+                <!-- Soru detayı buraya gelecek -->
+            </div>
+        </div>
+
+        <!-- Soru Sorma Sayfası -->
+        <div id="ask" class="page">
+            <h2>Yeni Soru Sor</h2>
+            
+            <form id="askForm">
+                <div class="form-group">
+                    <label>Soru Başlığı:</label>
+                    <input type="text" id="questionTitle" placeholder="Sorunuzu  yazın" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Kategori:</label>
+                    <select id="questionCategory" required>
+                        <option value="">Kategori seçin</option>
+                        <option value="academic">Akademik</option>
+                        <option value="registration">Kayıt İşlemleri</option>
+                        <option value="campus">Kampüs</option>
+                        <option value="other">Diğer</option>
+                    </select>
+                </div>
+                
+              
+                
+                <div class="form-group">
+                    <label>E-posta (İsteğe bağlı):</label>
+                    <input type="email" id="questionEmail" placeholder="Cevap için e-posta adresiniz">
+                </div>
+                
+                <button type="submit" class="btn">Soruyu Gönder</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bildirim -->
+    <div id="notification" class="notification"></div>
+
+    <script src="sayfa.js"></script>
+</body>
+</html>
